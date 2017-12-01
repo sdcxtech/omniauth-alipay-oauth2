@@ -1,27 +1,36 @@
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "omniauth-alipay/version"
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'omniauth-alipay/version'
 
-Gem::Specification.new do |s|
-  s.name        = "omniauth-alipay"
-  s.version     = Omniauth::Alipay::VERSION
-  s.authors     = ["Zhen.Sun"]
-  s.email       = ["sun@networking.io"]
-  s.homepage    = "http://rubygems.org/gems/omniauth-alipay"
-  s.summary     = %q{an omniauth strategy for alipay}
-  s.description = %q{an omniauth strategy for alipay}
+Gem::Specification.new do |spec|
+  spec.name        = 'omniauth-alipay-oauth2'
+  spec.version     = Omniauth::Alipay::VERSION
+  spec.authors     = ['Fuxin Hao']
+  spec.email       = ['haofxpro@gmail.com']
+  spec.homepage    = 'https://github.com/FX-HAO/omniauth-alipay'
+  spec.description = 'Alipay OAuth2 Strategy for OmniAuth'
+  spec.summary     = spec.description
 
-  s.rubyforge_project = "omniauth-alipay"
-  s.add_dependency 'omniauth'
-  s.add_dependency 'omniauth-oauth2'
-  s.add_dependency 'alipay', '~> 0.15.0'
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
+  # to allow pushing to a single host or delete this section to allow pushing to any host.
+  if spec.respond_to?(:metadata)
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
+  else
+    raise 'RubyGems 2.0 or newer is required to protect against ' \
+      'public gem pushes.'
+  end
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(test|spec|features)/})
+  end
+  spec.bindir        = 'exe'
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths = ['lib']
 
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  spec.required_ruby_version = '>= 2.0'
+
+  spec.add_dependency 'omniauth'
+  spec.add_dependency 'omniauth-oauth2'
+  spec.add_dependency 'alipay', '~> 0.15.0'
 end

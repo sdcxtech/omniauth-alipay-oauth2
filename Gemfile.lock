@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-alipay (1.0.0)
+    omniauth-alipay-oauth2 (0.1.1)
       alipay (~> 0.15.0)
       omniauth
       omniauth-oauth2
@@ -35,7 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  omniauth-alipay!
+  omniauth-alipay-oauth2!
 
 BUNDLED WITH
    1.15.4

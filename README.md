@@ -1,4 +1,4 @@
-omniauth-alipay
+omniauth-alipay-oauth2
 ===============
 
 Alipay OAuth2 Strategy for OmniAuth.
@@ -12,7 +12,7 @@ Read the Alipay docs for more details:
 Add to your `Gemfile`:
 
 ```ruby
-gem 'omniauth-alipay', path: 'FX-HAO/omniauth-alipay'
+gem 'omniauth-alipay-oauth2', require: 'omniauth-alipay'
 ```
 
 Then `bundle install`.
