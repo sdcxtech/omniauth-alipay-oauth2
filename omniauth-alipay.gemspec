@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "omniauth-alipay"
   s.add_dependency 'omniauth'
   s.add_dependency 'omniauth-oauth2'
+  s.add_dependency 'alipay', '~> 0.15.0'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
