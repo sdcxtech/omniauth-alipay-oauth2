@@ -1,6 +1,9 @@
 omniauth-alipay-oauth2
 ===============
 
+[![Gem Version](https://badge.fury.io/rb/omniauth-alipay-oauth2.svg)](https://badge.fury.io/rb/omniauth-alipay-oauth2)
+[![Dependency Status](https://gemnasium.com/badges/github.com/FX-HAO/omniauth-alipay-oauth2.svg)](https://gemnasium.com/github.com/FX-HAO/omniauth-alipay-oauth2)
+
 Alipay OAuth2 Strategy for OmniAuth.
 
 Support connecting Alipay account to third-party APP and website. 
