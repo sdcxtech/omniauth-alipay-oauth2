@@ -31,6 +31,10 @@ module OmniAuth
       option :app_private_key, nil
       option :alipay_public_key, nil
 
+      option :authorize_params, {scope: 'auth_user', state: 'init'}
+
+      option :token_params, {parse: :json}
+
       option :client_options, {
         authorize_url: 'https://openauth.alipay.com/oauth2/publicAppAuthorize.htm',
         token_url: 'https://openauth.alipay.com/oauth2/token',
@@ -61,8 +65,6 @@ module OmniAuth
       def request_phase
         params = client.auth_code.authorize_params.merge(redirect_uri: callback_url).merge(authorize_params)
         params['app_id'] = params.delete('client_id')
-        params['scope'] = 'auth_user'
-        params['state'] = 'init'
         params.delete('response_type')
         redirect client.authorize_url(params)
       end
