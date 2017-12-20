@@ -32,3 +32,7 @@ build/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+# Ignore all configuration files of IDE.
+/.idea
+/.DS_Store
