@@ -46,15 +46,15 @@ module OmniAuth
       info do
         {
           avatar: raw_info['avatar'],
-          user_type_value: raw_info['user_type_value'],
-          user_status: raw_info['user_type_value'],
-          gender: raw_info['gender'],
-          is_certified: raw_info['is_certified'],
           province: raw_info['province'],
           city: raw_info['city'],
+          nick_name: raw_info['nick_name'],
           is_student_certified: raw_info['is_student_certified'],
-          alipay_user_id: raw_info['alipay_user_id'],
-          nickname: raw_info['nick_name']
+          user_type: raw_info['user_type'],
+          user_status: raw_info['user_status'],
+          is_certified: raw_info['is_certified'],
+          gender: raw_info['gender'],
+          alipay_user_id: raw_info['alipay_user_id']
         }
       end
 
