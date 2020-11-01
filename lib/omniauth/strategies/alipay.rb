@@ -26,10 +26,12 @@ module OmniAuth
 
       option :name, 'alipay'
 
-      args [:client_id, :app_private_key, :alipay_public_key]
+      args [:client_id, :app_private_key, :alipay_public_key, :app_cert_sn, :alipay_root_cert_sn]
 
       option :app_private_key, nil
       option :alipay_public_key, nil
+      option :app_cert_sn, nil
+      option :alipay_root_cert_sn, nil
 
       option :authorize_params, {scope: 'auth_user', state: 'init'}
 
@@ -76,7 +78,9 @@ module OmniAuth
           app_id: options.client_id,
           app_private_key: options.app_private_key,
           alipay_public_key: options.alipay_public_key,
-          sign_type: 'RSA'
+          app_cert_sn: options.app_cert_sn,
+          alipay_root_cert_sn: options.alipay_root_cert_sn,
+          sign_type: 'RSA2'
         )
         params = alipay_client.sdk_execute(
           method: 'alipay.user.info.share',
@@ -95,7 +99,9 @@ module OmniAuth
           app_id: options.client_id,
           app_private_key: options.app_private_key,
           alipay_public_key: options.alipay_public_key,
-          sign_type: 'RSA'
+          app_cert_sn: options.app_cert_sn,
+          alipay_root_cert_sn: options.alipay_root_cert_sn,
+          sign_type: 'RSA2'
         )
         params = alipay_client.sdk_execute(
           method: 'alipay.system.oauth.token',
