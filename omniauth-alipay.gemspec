@@ -6,9 +6,9 @@ require 'omniauth-alipay/version'
 Gem::Specification.new do |spec|
   spec.name        = 'omniauth-alipay-oauth2'
   spec.version     = Omniauth::Alipay::VERSION
-  spec.authors     = ['Fuxin Hao']
-  spec.email       = ['haofxpro@gmail.com']
-  spec.homepage    = 'https://github.com/FX-HAO/omniauth-alipay'
+  spec.authors     = ['Jet']
+  spec.email       = ['jet@shudaojia.com']
+  spec.homepage    = 'https://github.com/sdcxtech/omniauth-alipay-oauth2.git'
   spec.description = 'Alipay OAuth2 Strategy for OmniAuth'
   spec.summary     = spec.description
 
@@ -32,5 +32,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'omniauth'
   spec.add_dependency 'omniauth-oauth2'
-  spec.add_dependency 'alipay', '~> 0.15.0'
+  spec.add_dependency 'alipay', '~> 0.16.0'
 end
